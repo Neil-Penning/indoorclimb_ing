@@ -1,0 +1,3 @@
+#! /bin/bash
+# file name: findimg
+find . -type f -regex ".*$1-[[:alnum:]]*$2[[:alnum:]]*\.jpeg"
