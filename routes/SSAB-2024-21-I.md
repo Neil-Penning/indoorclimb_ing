@@ -22,14 +22,12 @@
         
         <button type="button" onclick="logAttempt()">Log Attempt</button>
     </form>
-
     <script>
         function logAttempt() {
             const user = document.getElementById("user").value;
             const status = document.getElementById("status").value;
             const climbId = window.location.pathname.split("/").pop();
             const apiUrl = `https://indoorclimb.ing/routes/${climbId}/climber_attempt`;
-
             fetch(apiUrl, {
                 method: 'POST',
                 headers: {
