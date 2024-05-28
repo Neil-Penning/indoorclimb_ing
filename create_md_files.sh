@@ -14,6 +14,7 @@ for num in {19..21}; do
             echo "$filename" >> "reciept.tmp"
             echo "\t$img" >> "reciept.tmp"
             echo "![[$img]]" >> "$filename"
+            cat ./template.md > "$filename"
         done <<< "$images"
     done
 done
