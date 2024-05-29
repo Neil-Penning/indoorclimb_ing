@@ -1,5 +1,50 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #climberForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        select, button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
     <form id="climberForm">
         <label for="user">Select User:</label>
         <select id="user" name="user">
@@ -40,8 +85,8 @@
             })
             .catch(error => {
                 console.error('Error:', error);
+                alert('Failed to log attempt');
             });
-            alert('Attempt logged successfully');
         }
     </script>
 </body>
