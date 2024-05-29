@@ -4,6 +4,11 @@
             <option value="Neil">Neil</option>
             <option value="Nick">Nick</option>
             <option value="Declan">Declan</option>
+            <option value="Jack">Jack</option>
+            <option value="Anthony">Anthony</option>
+            <option value="Cara">Cara</option>
+            <option value="Connor">Connor</option>
+            <option value="Declan">Declan</option>
         </select><br><br>
         
         <label for="status">Select Attempt Status:</label>
@@ -18,9 +23,9 @@
     <script>
         function logAttempt() {
             const user = document.getElementById("user").value;
-            const status = document.getElementById("status").value;
+            const attempt_status = document.getElementById("status").value;
             const climbId = window.location.pathname.split("/").pop();
-            const apiUrl = `https://api.indoorclimb.ing/routes/${climbId}/` + user + "/" + status;
+            const apiUrl = `https://api.indoorclimb.ing/routes/${climbId}/` + user + "/" + attempt_status;
             fetch(apiUrl, {
                 method: 'POST',
                 headers: {
