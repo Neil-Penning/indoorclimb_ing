@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<img src="./img/climbs/SSAB-2024-19-OBN.jpeg" alt="Image">
     <form id="climberForm">
         <label for="user">Select User:</label>
         <select id="user" name="user">
@@ -30,9 +29,7 @@
             const climbId = window.location.pathname.split("/").pop();
             const apiUrl = `https://api.indoorclimb.ing/routes/${climbId}/` + user + "/" + attempt_status;
             fetch(apiUrl, {
-                method: 'POST',
-                body: JSON.stringify({
-                })
+                method: 'POST'
             })
             .then(response => {
                 if (response.ok) {

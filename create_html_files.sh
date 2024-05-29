@@ -18,7 +18,7 @@ for num in {19..22}; do
             echo "$filename" >> "reciept.tmp"
             echo "\t$img" >> "reciept.tmp"
             # Add HTML image tag
-            echo "<img src=\"$img\" alt=\"Image\">" >> "$filename"
+            #echo "<img src=\"$img\" alt=\"Image\">" >> "$filename"
         done <<< "$images"
         
         # Append the template at the end

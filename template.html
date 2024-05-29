@@ -27,9 +27,7 @@
             const climbId = window.location.pathname.split("/").pop();
             const apiUrl = `https://api.indoorclimb.ing/routes/${climbId}/` + user + "/" + attempt_status;
             fetch(apiUrl, {
-                method: 'POST',
-                body: JSON.stringify({
-                })
+                method: 'POST'
             })
             .then(response => {
                 if (response.ok) {
