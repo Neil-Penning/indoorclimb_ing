@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Indoor Climb</title>
-</head>
-<body>
-    <h1>Select User and Attempt Status</h1>
     <form id="climberForm">
         <label for="user">Select User:</label>
         <select id="user" name="user">

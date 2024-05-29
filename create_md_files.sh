@@ -2,7 +2,7 @@
 # file name: create_md_files.zsh
 
 echo "" > "reciept.tmp"
-for num in {19..21}; do
+for num in {19..22}; do
     for letter in {A..Z}; do
         filename="./routes/SSAB-2024-$num-$letter.md"
         echo "" > "$filename"
