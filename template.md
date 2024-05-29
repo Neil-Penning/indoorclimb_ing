@@ -10,9 +10,9 @@
         
         <label for="status">Select Attempt Status:</label>
         <select id="status" name="status">
-            <option value="attempt">Attempt</option>
-            <option value="sent">Sent</option>
-            <option value="flash">Flash</option>
+            <option value="attempt">attempt</option>
+            <option value="sent">sent</option>
+            <option value="flash">flash</option>
         </select><br><br>
         
         <button type="button" onclick="logAttempt()">Log Attempt</button>
@@ -22,16 +22,13 @@
             const user = document.getElementById("user").value;
             const status = document.getElementById("status").value;
             const climbId = window.location.pathname.split("/").pop();
-            const apiUrl = `https://indoorclimb.ing/routes/${climbId}/climber_attempt`;
+            const apiUrl = `https://api.indoorclimb.ing/routes/${climbId}/` + user + "/" + status;
             fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    climber_id: user,
-                    climb_id: climbId,
-                    attempt_status: status
                 })
             })
             .then(response => {

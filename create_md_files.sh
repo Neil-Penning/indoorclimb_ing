@@ -7,7 +7,6 @@ for num in {19..22}; do
         filename="./routes/SSAB-2024-$num-$letter.md"
         echo "" > "$filename"
         
-        
         images=$(./findimg $num $letter)
         
         while IFS= read -r img; do
